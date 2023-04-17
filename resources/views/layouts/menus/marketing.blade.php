@@ -17,8 +17,8 @@
 
                     <li class="menu-item">
                         <a href="{{ route('employee.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons fa fa-users"></i>
-                            Employees
+                            <i class="menu-icon tf-icons fa fa-house"></i>
+                            Property Listings
                         </a>
                     </li>
 
@@ -31,14 +31,26 @@
                         <ul class="menu-sub">
 
                             <li class="menu-item">
-                                <a href="{{ route('role.index') }}" class="menu-link">
-                                    Role
+                                <a href="{{ route('property_type.index') }}" class="menu-link">
+                                    Property Type
                                 </a>
                             </li>
 
                             <li class="menu-item">
-                                <a href="{{ route('permission.index') }}" class="menu-link">
-                                    Permission
+                                <a href="{{ route('region.index') }}" class="menu-link">
+                                    Region
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="{{ route('township.index') }}" class="menu-link">
+                                    Township
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="{{ route('ward.index') }}" class="menu-link">
+                                    Ward
                                 </a>
                             </li>
                         </ul>
