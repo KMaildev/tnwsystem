@@ -40,7 +40,7 @@
 
 
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6 mb-4">
-                    <a href="">
+                    <a href="{{ route('sale_team_dashboard.index') }}">
                         <div class="card" style="background-color: #EF8B33;">
                             <div class="card-body text-center">
                                 <div class="avatar avatar-md mx-auto mb-3">

@@ -10,6 +10,8 @@ use App\Http\Controllers\PropertyListsDatatableController;
 use App\Http\Controllers\PropertyTypeController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SaleTeamController;
+use App\Http\Controllers\SaleTeamDashboardController;
 use App\Http\Controllers\TownshipController;
 use App\Http\Controllers\WardController;
 use Illuminate\Support\Facades\Auth;
@@ -31,7 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::post('employeesortable', [EmployeeController::class, 'employeeSortable']);
 
 
-    // Marketing
+    // Marketing Team
     Route::resource('marketing_dashboard', MarketingDashboardController::class);
     Route::resource('property_type', PropertyTypeController::class);
     Route::resource('region', RegionController::class);
@@ -45,4 +47,9 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('property_lists_datatable', PropertyListsDatatableController::class);
     Route::get('property_lists_datatable_marketing', [PropertyListsDatatableController::class, 'propertyListsDatatableMarketing'])->name('property_lists_datatable_marketing');
+
+
+    // Sale Team 
+    Route::resource('sale_team_dashboard', SaleTeamDashboardController::class);
+    Route::resource('sale_team', SaleTeamController::class);
 });
