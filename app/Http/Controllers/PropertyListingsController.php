@@ -114,4 +114,20 @@ class PropertyListingsController extends Controller
 
         return json_encode($marketing_data);
     }
+
+    public function get_phone_number($id)
+    {
+        $marketing = PropertyListing::findOrFail($id);
+        $propertyPhoneNumber = explode(',', $marketing->phone);
+        $propertyPhoneNumberTotal = count($propertyPhoneNumber);
+
+        $html = '';
+        for ($i = 0; $i < $propertyPhoneNumberTotal; $i++) {
+            $ph = $propertyPhoneNumber[$i];
+            $html .= '<a href="tel:' . $ph . '"><i class="fa fa-phone"></i> ' . $ph . '</a>';
+            $html .= "<br>";
+        }
+
+        return response()->json(['html' => $html]);
+    }
 }

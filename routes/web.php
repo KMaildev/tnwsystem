@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('property_listings', PropertyListingsController::class);
     Route::get('already_live_filter_search', [PropertyListingsController::class, 'already_live_filter_search']);
+    Route::get('get_phone_number/{id}', [PropertyListingsController::class, 'get_phone_number']);
 
     Route::resource('property_lists_datatable', PropertyListsDatatableController::class);
     Route::get('property_lists_datatable_marketing', [PropertyListsDatatableController::class, 'propertyListsDatatableMarketing'])->name('property_lists_datatable_marketing');

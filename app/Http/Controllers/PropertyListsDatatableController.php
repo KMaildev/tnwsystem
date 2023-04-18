@@ -104,7 +104,7 @@ class PropertyListsDatatableController extends Controller
                 $html .= '
                     <button type="button" class="btn btn-primary btn-xs" id="showPhoneModel" data-id="' . $id . '">
                         <i class="fa fa-phone"></i>
-                        Call Now
+                         Phone
                     </button>
                 ';
                 return $html;
@@ -128,12 +128,8 @@ class PropertyListsDatatableController extends Controller
                         </div>
 
                         <div class="d-flex justify-content-between">
-                            <a href=""
-                                style="font-size: 12px;">
-                                Upload
-                            </a>
                             <a href="" style="font-size: 12px;">
-                                View
+                                Upload
                             </a>
                         </div>
                     </div>';

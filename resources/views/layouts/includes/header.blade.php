@@ -43,8 +43,8 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/bootstrap-select/bootstrap-select.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/install/datetime/jquery.datetimepicker.css') }}">
 
-    <link rel="stylesheet" href="https://skgroupmm.com/css/table.css" />
-    <link rel="stylesheet" href="https://skgroupmm.com/css/scrollbar.css" />
+    <link rel="stylesheet" href="{{ asset('css/table.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/scrollbar.css') }}" />
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
 
