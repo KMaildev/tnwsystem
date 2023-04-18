@@ -6,6 +6,7 @@ use App\Http\Controllers\ManagementDashboardController;
 use App\Http\Controllers\MarketingDashboardController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\PropertyListingsController;
+use App\Http\Controllers\PropertyListsDatatableController;
 use App\Http\Controllers\PropertyTypeController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\RoleController;
@@ -40,4 +41,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('property_listings', PropertyListingsController::class);
     Route::get('already_live_filter_search', [PropertyListingsController::class, 'already_live_filter_search']);
+
+    Route::resource('property_lists_datatable', PropertyListsDatatableController::class);
+    Route::get('property_lists_datatable_marketing', [PropertyListsDatatableController::class, 'propertyListsDatatableMarketing'])->name('property_lists_datatable_marketing');
 });

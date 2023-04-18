@@ -32,8 +32,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
 <script src="{{ asset('assets/install/datetime/jquery.datetimepicker.js') }}"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+{{-- <script src="{{ asset('assets/datatables.net-bs4/dataTables.bootstrap4fd53.js?v4.0.1') }}"></script> --}}
+
 @yield('script')
 
 <script type="text/javascript">

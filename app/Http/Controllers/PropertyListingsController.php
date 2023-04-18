@@ -16,6 +16,7 @@ class PropertyListingsController extends Controller
         return view('property_listings.index');
     }
 
+
     public function create()
     {
         $property_types = PropertyType::all();
@@ -81,7 +82,6 @@ class PropertyListingsController extends Controller
         $marketing->save();
         return redirect()->back()->with('success', 'Your processing has been completed.');
     }
-
 
 
 
