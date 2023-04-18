@@ -16,7 +16,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('employee.index') }}" class="menu-link">
+                        <a href="{{ route('property_listings.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons fa fa-house"></i>
                             Property Listings
                         </a>

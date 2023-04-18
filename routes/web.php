@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ManagementDashboardController;
 use App\Http\Controllers\MarketingDashboardController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\PropertyListingsController;
 use App\Http\Controllers\PropertyTypeController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\RoleController;
@@ -36,4 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('township', TownshipController::class);
     Route::resource('ward', WardController::class);
     Route::get('ward_list_ajax', [WardController::class, 'ward_list_ajax']);
+
+    Route::resource('property_listings', PropertyListingsController::class);
+    Route::get('already_live_filter_search', [PropertyListingsController::class, 'already_live_filter_search']);
 });
