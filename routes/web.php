@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HouseShowingController;
 use App\Http\Controllers\ManagementDashboardController;
 use App\Http\Controllers\MarketingDashboardController;
 use App\Http\Controllers\PermissionController;
@@ -52,4 +53,5 @@ Route::middleware('auth')->group(function () {
     // Sale Team 
     Route::resource('sale_team_dashboard', SaleTeamDashboardController::class);
     Route::resource('sale_team', SaleTeamController::class);
+    Route::resource('house_showing', HouseShowingController::class);
 });

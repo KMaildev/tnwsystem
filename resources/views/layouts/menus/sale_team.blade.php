@@ -16,15 +16,15 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('property_listings.index') }}" class="menu-link">
+                        <a href="{{ route('house_showing.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons fa fa-house"></i>
-                            Home Record
+                            House Showing
                         </a>
                     </li>
 
                     <li class="menu-item">
-                        <a href="{{ route('property_listings.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons fa fa-house"></i>
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons fa fa-calendar"></i>
                             Appointment Scheduling
                         </a>
                     </li>
