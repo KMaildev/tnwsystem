@@ -26,7 +26,7 @@ class StoreSaleTeam extends FormRequest
         return [
             'code' => 'required',
             'title' => 'required',
-            'users' => 'required',
+            // 'users' => 'required',
         ];
     }
 }

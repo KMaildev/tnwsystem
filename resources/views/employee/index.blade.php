@@ -87,7 +87,6 @@
                                     </td>
 
                                     <td style="text-align: center;">
-
                                         <div class="btn-group">
                                             <button class="btn btn-primary btn-xs dropdown-toggle" type="button"
                                                 data-bs-toggle="dropdown" aria-expanded="false">
