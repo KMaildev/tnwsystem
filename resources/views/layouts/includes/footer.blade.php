@@ -37,6 +37,11 @@
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
 {{-- <script src="{{ asset('assets/datatables.net-bs4/dataTables.bootstrap4fd53.js?v4.0.1') }}"></script> --}}
 
+
+<script src="{{ asset('assets/vendor/libs/bs-stepper/bs-stepper.js') }}"></script>
+<script src="{{ asset('assets/js/form-wizard-numbered.js') }}"></script>
+<script src="{{ asset('assets/js/form-wizard-validation.js') }}"></script>
+
 @yield('script')
 
 <script type="text/javascript">

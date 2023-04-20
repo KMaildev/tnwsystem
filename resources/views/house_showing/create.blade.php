@@ -18,6 +18,9 @@
                             </label>
                             <div class="col-md-9">
                                 <select class="select2 form-control" name="sale_team_id" required>
+                                    <option value="">
+                                        --Select Sale Team--
+                                    </option>
                                     @foreach ($sale_teams as $sale_team)
                                         <option value="{{ $sale_team->id }}">
                                             {{ $sale_team->code ?? '' }}
@@ -168,5 +171,5 @@
     </div>
 @endsection
 @section('script')
-    {!! JsValidator::formRequest('App\Http\Requests\StoreSaleTeam', '#create-form') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\StoreHouseShowing', '#create-form') !!}
 @endsection
