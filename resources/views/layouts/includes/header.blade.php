@@ -47,10 +47,6 @@
     <link rel="stylesheet" href="{{ asset('css/scrollbar.css') }}" />
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
-
-    {{-- <link rel="stylesheet"
-        href="{{ asset('assets/datatables.net-bs4/dataTables.bootstrap4.minfd53.css?v4.0.1') }}"> --}}
-
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/bs-stepper/bs-stepper.css') }}" />
 </head>
 

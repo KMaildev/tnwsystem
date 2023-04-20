@@ -15,12 +15,12 @@ class PropertyListsDatatableController extends Controller
         $to = $request->get('to');
 
         if ($start && $to) {
-            $data = PropertyListing::with('township_table', 'users')
+            $data = PropertyListing::with('township_table', 'users', 'property_type')
                 ->where('reject_status', NULL)
                 ->whereBetween('price', [$start, $to])
                 ->orderBy('id', 'DESC');
         } else {
-            $data = PropertyListing::with('township_table', 'users')
+            $data = PropertyListing::with('township_table', 'users', 'property_type')
                 ->where('reject_status', NULL)
                 ->whereHas('users', function ($q) use ($request) {
                     $q->orWhere('name', 'LIKE', '%' . $request . '%');
@@ -58,6 +58,12 @@ class PropertyListsDatatableController extends Controller
 
             ->editColumn('property_type', function ($each) {
                 return $each->property_type ? $each->property_type->property_type : '-';
+            })
+
+            ->filterColumn('property_type', function ($query, $keyword) {
+                $query->whereHas('property_type', function ($q1) use ($keyword) {
+                    $q1->where('property_type', 'like', '%' . $keyword . '%');
+                });
             })
 
             ->editColumn('sqft', function ($each) {

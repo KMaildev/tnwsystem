@@ -1,4 +1,13 @@
-<table class="table table-bordered table-striped" id="datatable">
+<style>
+    tfoot {
+        display: table-header-group;
+    }
+
+    .dataTables_filter {
+        display: none;
+    }
+</style>
+<table class="table table-bordered table-striped display" id="datatable">
     <thead class="tbbg">
         <tr>
             <th class="tbbg" rowspan="2" style="width: 1%;">

@@ -1,51 +1,5 @@
 @extends('layouts.menus.marketing')
 @section('content')
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-
-        tfoot {
-            display: table-header-group;
-        }
-
-        @media only screen and (max-width:800px) {
-
-            #no-more-tables tbody,
-            #no-more-tables tr,
-            #no-more-tables td {
-                display: block;
-            }
-
-            #no-more-tables thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-
-            #no-more-tables td {
-                position: relative;
-                padding-left: 50%;
-                border: none;
-                border-bottom: 1px solid #eee;
-            }
-
-            #no-more-tables td:before {
-                content: attr(data-title);
-                position: absolute;
-                left: 6px;
-                font-weight: bold;
-            }
-
-            #no-more-tables tr {
-                border-bottom: 1px solid #ccc;
-            }
-        }
-    </style>
-
     <a href="{{ route('property_listings.create') }}" class="dt-button create-new btn btn-primary btn-sm">
         <span>
             <i class="bx bx-plus me-sm-2"></i>
@@ -61,9 +15,9 @@
         </div>
     </div>
 
-
     @include('property_listings.shared.phone_modal')
 @endsection
+
 @section('script')
     <script>
         var table = $('#datatable').DataTable({
@@ -177,7 +131,6 @@
         $('#dateSearch').on('click', function() {
             table.draw();
         });
-
 
         $(document).ready(function() {
             $('#datatable thead th').each(function() {
