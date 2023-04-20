@@ -47,9 +47,6 @@ Route::middleware('auth')->group(function () {
     Route::get('already_live_filter_search', [PropertyListingsController::class, 'already_live_filter_search']);
     Route::get('get_phone_number/{id}', [PropertyListingsController::class, 'get_phone_number']);
 
-    Route::resource('property_lists_datatable', PropertyListsDatatableController::class);
-    Route::get('property_lists_datatable_marketing', [PropertyListsDatatableController::class, 'propertyListsDatatableMarketing'])->name('property_lists_datatable_marketing');
-
 
     // Sale Team 
     Route::resource('sale_team_dashboard', SaleTeamDashboardController::class);
@@ -58,4 +55,10 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('house_showing_management', HouseShowingManagementController::class);
     Route::get('showing_property', [HouseShowingManagementController::class, 'showing_property'])->name('showing_property');
+
+
+    // Property List Datatable 
+    Route::resource('property_lists_datatable', PropertyListsDatatableController::class);
+    Route::get('property_lists_datatable_marketing', [PropertyListsDatatableController::class, 'propertyListsDatatableMarketing'])->name('property_lists_datatable_marketing');
+    Route::get('property_lists_datatable_sale', [PropertyListsDatatableController::class, 'propertyListsDatatableSale'])->name('property_lists_datatable_sale');
 });
