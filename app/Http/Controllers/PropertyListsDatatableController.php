@@ -134,7 +134,7 @@ class PropertyListsDatatableController extends Controller
                         </div>
 
                         <div class="d-flex justify-content-between">
-                            <a href="" style="font-size: 12px;">
+                            <a href="' . route('property_file_create', ['id' => $each->id]) . '" style="font-size: 12px;">
                                 Upload
                             </a>
                         </div>

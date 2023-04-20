@@ -41,6 +41,8 @@
 <script src="{{ asset('assets/js/form-wizard-numbered.js') }}"></script>
 <script src="{{ asset('assets/js/form-wizard-validation.js') }}"></script>
 
+<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+
 @yield('script')
 
 <script type="text/javascript">

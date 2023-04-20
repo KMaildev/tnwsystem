@@ -7,6 +7,7 @@ use App\Http\Controllers\HouseShowingManagementController;
 use App\Http\Controllers\ManagementDashboardController;
 use App\Http\Controllers\MarketingDashboardController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\PropertyFileController;
 use App\Http\Controllers\PropertyListingsController;
 use App\Http\Controllers\PropertyListsDatatableController;
 use App\Http\Controllers\PropertyTypeController;
@@ -46,6 +47,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('property_listings', PropertyListingsController::class);
     Route::get('already_live_filter_search', [PropertyListingsController::class, 'already_live_filter_search']);
     Route::get('get_phone_number/{id}', [PropertyListingsController::class, 'get_phone_number']);
+
+    Route::resource('property_file', PropertyFileController::class);
+    Route::get('property_file_create/{id}', [PropertyFileController::class, 'property_file_create'])->name('property_file_create');
 
 
     // Sale Team 
